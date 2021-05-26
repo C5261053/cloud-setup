@@ -8,35 +8,35 @@
 	"useConfig": {
         "properties": [
             {
-                "location": "/config/environments/local-dev.properties",
+                "location": "../config/environments/local-dev.properties",
                 "persona": "development"
             },
             {
-                "location": "/config/environments/local-stage.properties",
+                "location": "../config/environments/local-stage.properties",
                 "persona": "staging"
             },
             {
-                "location": "/config/environments/local-prod.properties",
+                "location": "../config/environments/local-prod.properties",
                 "persona": "production"
             },
             {
-                "location": "/config/environments/common.properties"
+                "location": "../config/environments/common.properties"
              },
              {
                 "aspect": "accstorefront",
-                "location": "/config/environments/accstorefront.properties"
+                "location": "../config/environments/accstorefront.properties"
              },
              {
                 "aspect": "api",
-                "location": "/config/environments/api.properties"
+                "location": "../config/environments/api.properties"
              },
              {
                 "aspect": "backoffice",
-                "location": "/config/environments/backoffice.properties"
+                "location": "../config/environments/backoffice.properties"
              }
         ],
         "extensions": {
-            "location": "/config/localextensions.xml",
+            "location": "../config/localextensions.xml",
             "exclude": [
                 "azurecloudhotfolder",
                 "cloudcommons",
@@ -422,17 +422,4 @@
 		  ]
 	   }
 	],
-	"tests": {
-        "extensions": [
-            "kiwi",
-            "tiger"
-        ],
-        "annotations": [
-            "UnitTests",
-            "IntegrationTests"
-        ],
-        "packages": [
-            "com.acme.*"
-        ]
-    }
  }
