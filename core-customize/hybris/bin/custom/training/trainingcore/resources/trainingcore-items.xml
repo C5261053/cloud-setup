@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+ Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
+-->
+<items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="items.xsd">
+
+
+
+    <itemtypes>
+
+        <!-- Add your item definitions here -->
+
+
+        <!-- TypeGroups are for structure of this file only -->
+
+
+        <typegroup name="Electronics">
+
+            <itemtype code="CustomZoneDeliveryModeValue" autocreate="true" generate="true" extends="ZoneDeliveryModeValue" jaloclass="org.training.core.jalo.CustomZoneDeliveryModeValue" >
+            <attributes>
+
+                <attribute qualifier="maxRange" type="java.lang.Double" autocreate="true">
+                    <persistence type="property" />
+                    <modifiers read="true" write="true" search="true" optional="false" initial="true" unique="true"/>
+                </attribute>
+                <attribute qualifier="maxWeight" type="java.lang.Double" autocreate="true">
+                    <persistence type="property" />
+                    <modifiers read="true" write="true" search="true" optional="false" initial="true" unique="true"/>
+                </attribute>
+            </attributes>
+            <indexes>
+                <index name="IdentityIDX" unique="true" replace="true">
+                    <key attribute="deliveryMode"/>
+                    <key attribute="zone"/>
+                    <key attribute="currency"/>
+                    <key attribute="minimum"/>
+                    <key attribute="maxRange" />
+                    <key attribute="maxWeight" />
+                </index>
+            </indexes>
+        </itemtype>
+
+
+<itemtype code="CMSLinkComponent" autocreate="false"
+          generate="false">
+    <attributes>
+        <attribute qualifier="myCustomLocalizedBoolean" type="localized:java.lang.Boolean">
+            <persistence type="property"/>
+        </attribute>
+    </attributes>
+</itemtype>
+
+
+<!--        <itemtype code="TestItem2" autocreate="true" generate="true" extends="GenericItem">-->
+<!--            <deployment table="TestItem2" typecode="11821" />-->
+<!--            <attributes>-->
+<!--                <attribute qualifier="maxRange" type="java.lang.Double" autocreate="true">-->
+<!--                    <persistence type="property" />-->
+<!--                    <modifiers read="true" write="true" search="true" optional="false" initial="true" unique="true"/>-->
+<!--                </attribute>-->
+<!--                <attribute qualifier="maxWeight" type="java.lang.Double" autocreate="true">-->
+<!--                    <persistence type="property" />-->
+<!--                    <modifiers read="true" write="true" search="true" optional="false" initial="true" unique="true"/>-->
+<!--                </attribute>-->
+<!--            </attributes>-->
+<!--        </itemtype>-->
+
+<!--        <itemtype code="Product" generate="false" autocreate="false">-->
+<!--                <attributes>-->
+<!--                    <attribute qualifier="test" type="TestItem2" autocreate="true">-->
+<!--                        <persistence type="property" />-->
+<!--                    </attribute>-->
+<!--                </attributes>-->
+<!--            </itemtype>-->
+
+        </typegroup>
+
+
+
+    </itemtypes>
+</items>
