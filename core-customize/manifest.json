@@ -247,6 +247,10 @@
 				"key":"spring.session.enabled",
 				"value":"true"
 			 },
+       {
+         "key":"hac.webroot",
+         "value":"/hac_test_manifest"
+       },
 			 {
 				"key":"spring.session.yacceleratorstorefront.save",
 				"value":"async"
